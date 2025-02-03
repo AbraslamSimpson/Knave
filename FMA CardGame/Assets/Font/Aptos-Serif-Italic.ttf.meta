@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 9a1be26bc135b8e4bb7709596f7ccaae
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Aptos Serif
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b70da3ceaadc8504bb00b39949645d10, type: 3}
+  - {fileID: 12800000, guid: 48a97f2e896ca234ca7911e5855e942c, type: 3}
+  - {fileID: 12800000, guid: 22b9b27624863d64ebdba1f00fb0ef53, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

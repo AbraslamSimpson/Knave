@@ -14,13 +14,17 @@ public class enemyMainScript : MonoBehaviour
 
     public PlayerScript pScript;
     public GameManager gm;
+    public enemySpawn enemySpawn;
+    public EnemyDie eDie;
 
     public int enemyAttackValue;
 
     public GameObject[] handHiders;
+    
     void Start()
     {
         handHiders[4].SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -85,8 +89,9 @@ public class enemyMainScript : MonoBehaviour
     IEnumerator dieRoutine()
     {
         yield return new WaitForSeconds(2);
-        gm.enemiesLeft--;
-        Destroy(Enemy);
+        eDie.die();
+        //gm.enemiesLeft--;
+        
         
         
     }

@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: f9a8e09a0e0de3649863c8cf23b8e5c7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Aptos Mono
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 92434eb1f3b998947b136548ec85e227, type: 3}
+  - {fileID: 12800000, guid: 19fc34fe8755e524ebff6696fb55fe85, type: 3}
+  - {fileID: 12800000, guid: e08188a383a1faf439d2d40677b64af5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

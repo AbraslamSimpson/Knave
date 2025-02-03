@@ -257,7 +257,7 @@ public class runSequence : MonoBehaviour
     public void enemySequenceDecider()
     {
 
-        foreach (Card card in gm.playedCards)
+        foreach (Card card in gm.EnemyPlayedCards)
         {
             if (!card)
             {
@@ -272,8 +272,9 @@ public class runSequence : MonoBehaviour
                     cardTypeAttack.Add(card);
 
                 }
-
+                print(eIndex);
                 activeZones[eIndex] = 1;
+                
             }
 
             else if (card.type == "Defend")
@@ -310,54 +311,30 @@ public class runSequence : MonoBehaviour
         //foreach (Card card in cardTypeAttack)
         for (int i = 0; i < activeZones.Count; i++)
         {
-
+            print(activeZones);
             if (activeZones[i] != 0)
             {
                 
             }
             if (activeZones[i] == 1)
             {
+                yield return new WaitForSeconds(2);
                 eMS.enemyAttack();
 
             }
             else if (activeZones[i] == 2)
             {
-                eMS.enemyDefend();
-            }
-            if (activeZones[i] == 3)
-            {
-               
-
-                if (enemyForward == false)
-                {
-
-                    //pScript.anim.SetBool("isMoving", true);
-                    
-                    enemyForward = true;
-
-                }
-                else if (enemyForward == true)
-                {
-                    //pScript.anim.SetBool("isMovingBack", true);
-                   
-                    playerForward = false;
-                }
-
-               
                 yield return new WaitForSeconds(2);
-
-                /*pScript.anim.SetBool("isMoving", false);
-                particleZone[i].SetActive(false);
-                pScript.anim.SetBool("isIdle", true);
-                pScript.anim.SetBool("isMovingBack", false);*/
-            }
+                eMS.enemyDefend();
+            }           
+            
             else
             {
                 print("Nothing in element" + activeZones[i]);
             }
 
 
-            //StartCoroutine(waitTwo());
+            StartCoroutine(waitTwo());
 
         }
 

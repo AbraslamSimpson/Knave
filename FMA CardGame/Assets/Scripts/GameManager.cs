@@ -173,6 +173,7 @@ public class GameManager : MonoBehaviour
 
         if (turns.isYourTurn == true)
         {
+            
             for (int i = 0; i < availableBoardSlots.Length; i++)
             {   
                 if (availableBoardSlots[i] == true)
@@ -186,6 +187,7 @@ public class GameManager : MonoBehaviour
                     card.slotHolder = i;
                     card.transform.SetParent(boardSlots[i].transform);
                     playedCards[i] = card;
+                    card.transform.localScale = new Vector2(0.4f,0.4f);
                     
 
                    break;

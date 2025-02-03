@@ -52,20 +52,13 @@ public class Card : MonoBehaviour
     public void OnMouseDown()
     {
         
-        //if (isHovering == false && isPlayed == false)
-        //{
-          
+       
                  
-        //        priorSpace = gm.cardSlots[handIndex].position;
-        //        transform.position = new Vector3(0, 0, 0);
-        //       // transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);  REMOVED WHILE TRYING NEW IDEA GBC DBZ TCG STYLE
-        //        isHovering = true;
-            
-        //}
+        
 
         
         
-       if (turns.isYourTurn == true)
+       if (turns.isYourTurn == true && isPlayed == false)
        {
             gm.playCard(this);
             print("PlayingCard");
