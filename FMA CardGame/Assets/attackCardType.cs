@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class attackCardType : MonoBehaviour
 {
-    public int attackDamage;
+    int attackDamage;
 
+    public PlayerScript pScript;
 
     // Start is called before the first frame update
     void Start()
