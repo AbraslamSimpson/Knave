@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7012436016389238903}
   - component: {fileID: 7012436016389238900}
   - component: {fileID: 4319691393480326101}
+  - component: {fileID: 3853124001342817009}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -137,5 +138,19 @@ MonoBehaviour:
   enemyIsDefending: 0
   pScript: {fileID: 0}
   gm: {fileID: 0}
+  isMinion: 0
   enemyAttackValue: 0
   handHiders: []
+--- !u!114 &3853124001342817009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012436016389238896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b0579e9c008444b821a8f61a7b44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}

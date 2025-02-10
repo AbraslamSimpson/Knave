@@ -7,9 +7,12 @@ public class PlayerScript : MonoBehaviour
 {
     public int HP = 100;
     public string hpString;
+    public string braveryString;
     public Text hpValueText;
     public bool isDefending;
     public int attackDamage;
+    public int braveryValue;
+    public Text braveryText;
 
     public int defendStacks;
 
@@ -28,6 +31,8 @@ public class PlayerScript : MonoBehaviour
         hpString = HP.ToString();
         hpValueText.text = hpString;
 
+        braveryString = braveryValue.ToString();
+        braveryText.text = braveryString;
         
     }
 

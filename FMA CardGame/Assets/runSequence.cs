@@ -8,6 +8,7 @@ public class runSequence : MonoBehaviour
     public GameManager gm;
     private string cardType;
     public PlayerScript pScript;
+    public attackCardType aCT;
     public enemyMainScript eMS;
     public Turns turns;
     
@@ -100,30 +101,28 @@ public class runSequence : MonoBehaviour
 
                 if (activeZones[i] != 0)
                 {
-                    //particleZone[i].SetActive(true);
-                    //print("about to wait");
-                    //StartCoroutine(waitParticle(i));
+                  
                 }
                 if (activeZones[i] == 1)
                 {
                     pScript.anim.SetBool("isAttacking", true);
                     particleZone[i].SetActive(true);
-                    print("Attacking");
+                    
                     if (eMS.enemyIsDefending == false)
                     {
-
-                        eMS.takeDamage(pScript.attackDamage);
+                        pScript.braveryValue = pScript.braveryValue + aCT.attackDamage;
+                        gm.selectedEnemy.GetComponent<eMS>().takeDamage(aCT.attackDamage);
+                        
 
                     }
                     else if (eMS.enemyIsDefending == true)
                     {
-                        eMS.takeDamage(pScript.attackDamage - 15);
+                        eMS.takeDamage(aCT.attackDamage - 15);
                     }
-                    particleZone[i].SetActive(true);
-
-                    yield return new WaitForSeconds(2);
-
                     pScript.anim.SetBool("isAttacking", false);
+                    yield return new WaitForSeconds(0.5f);
+
+                    
                     particleZone[i].SetActive(false);
 
                 }
@@ -345,4 +344,6 @@ public class runSequence : MonoBehaviour
         StartCoroutine(enemyWaitRoutine());
         
     }
+
+    
 }

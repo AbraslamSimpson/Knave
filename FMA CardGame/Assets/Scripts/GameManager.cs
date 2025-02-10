@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
 
@@ -12,8 +13,8 @@ public class GameManager : MonoBehaviour
     public List<Card> hand = new List<Card>();
     public List<Card> enemyHand = new List<Card>();
     public List<ResourceCard> resourceDeck = new List<ResourceCard>();
+    public List<GameObject> minionList;
 
-    //public int attackDamage;
 
     public Transform[] boardSlots;
     public Transform[] cardSlots;
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     public Transform[] enemyCardSlots;
     public bool[] availableEnemyBSlots;
     public bool[] availableEnemyCSlots;
+    
 
     public GameObject boardBack, boardFront;
 
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     public bool isHovering;
     public bool playerDefending;
+    public bool isChoosing;
     public int currentBSlot;
     public int slotHolder;
 
@@ -47,8 +50,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public List<Card> playedCards = new List<Card>();
     public List<Card> EnemyPlayedCards = new List<Card>();
+    public GameObject selectedEnemy;
 
-
+    public Camera cam;
 
     //public Text deckSizeText;
 
@@ -58,7 +62,8 @@ public class GameManager : MonoBehaviour
         youWinText.enabled = false;
 
         for (int i = 0; i < 4; i++)
-        { DrawCard(); enemyDraw(); };
+        { DrawCard(); enemyDraw(); };       //Draw 4 cards into the enemies hand at the start of the game.
+       
        
 
 
@@ -81,9 +86,7 @@ public class GameManager : MonoBehaviour
         }
     }
     
-  
 
-    // Start is called before the first frame update
    public void DrawCard()
    {
         Random.seed = System.DateTime.Now.Millisecond;
@@ -123,7 +126,7 @@ public class GameManager : MonoBehaviour
             {
                 if (availableEnemyCSlots[i] == true)
                 {
-                    eMS.handHiders[i].SetActive(true);
+                    //eMS.handHiders[i].SetActive(true);
                     Card enemyCopyCard = Instantiate(enemyRandCard);
                                    
                     enemyCopyCard.enemyHandIndex = i;
@@ -188,9 +191,10 @@ public class GameManager : MonoBehaviour
                     card.transform.SetParent(boardSlots[i].transform);
                     playedCards[i] = card;
                     card.transform.localScale = new Vector2(0.4f,0.4f);
-                    
+                    isChoosing = true;
+                    StartCoroutine(selectTarget());
 
-                   break;
+                   return;
 
 
                 }
@@ -210,7 +214,7 @@ public class GameManager : MonoBehaviour
                 if (availableEnemyBSlots[i] == true)
                 {
                     newPlayedCard = Instantiate(eCard);
-                    eMS.handHiders[newPlayedCard.enemyHandIndex].SetActive(false);
+                    //eMS.handHiders[newPlayedCard.enemyHandIndex].SetActive(false);
                     eCard.gameObject.SetActive(false);
                     enemyHand.Remove(eCard);
                     EnemyPlayedCards[i] = eCard;
@@ -284,6 +288,8 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
         }
 
+       
+
     }
 
     public IEnumerator waitRoutine()
@@ -292,6 +298,31 @@ public class GameManager : MonoBehaviour
         anim.SetBool("isAttacking", false);
         anim.SetBool("isDefending", false);
         //turns.EndYourTurn();
+        
+    }
+
+    public IEnumerator selectTarget()
+    {
+       while (isChoosing == true)
+        {  
+             print("choosing targets");
+            
+            if (Input.GetMouseButtonUp(0))
+            {
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1000) ;
+
+                if(hit.collider != null)
+                {
+                     Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
+                     selectedEnemy = hit.transform.gameObject;
+                     isChoosing=false;
+                }
+                  yield return selectedEnemy;
+                
+                
+            }
+           yield return null; 
+        }
         
     }
 }

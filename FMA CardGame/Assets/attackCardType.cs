@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class attackCardType : MonoBehaviour
 {
-    int attackDamage;
+   public int attackDamage;
 
     public PlayerScript pScript;
 

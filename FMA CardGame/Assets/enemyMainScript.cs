@@ -14,8 +14,10 @@ public class enemyMainScript : MonoBehaviour
 
     public PlayerScript pScript;
     public GameManager gm;
-    public enemySpawn enemySpawn;
-    public EnemyDie eDie;
+    public runSequence rSeq;
+    
+
+    public bool isMinion;
 
     public int enemyAttackValue;
 
@@ -23,7 +25,7 @@ public class enemyMainScript : MonoBehaviour
     
     void Start()
     {
-        handHiders[4].SetActive(false);
+       
         
     }
 
@@ -39,7 +41,9 @@ public class enemyMainScript : MonoBehaviour
         //    EnemyHPValue.text = "0";
         //}
 
+
     }
+
 
     
 
@@ -89,7 +93,7 @@ public class enemyMainScript : MonoBehaviour
     IEnumerator dieRoutine()
     {
         yield return new WaitForSeconds(2);
-        eDie.die();
+        
         //gm.enemiesLeft--;
         
         

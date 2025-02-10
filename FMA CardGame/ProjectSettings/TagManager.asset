@@ -8,6 +8,7 @@ TagManager:
   - Hand
   - PlayerCardZone
   - EnemyCardZone
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - Card
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Raycast
   - 
   - 
   - 

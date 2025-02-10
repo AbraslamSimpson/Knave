@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 71799947}
   - component: {fileID: 71799949}
   - component: {fileID: 71799948}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 161443449}
   - component: {fileID: 161443448}
   - component: {fileID: 161443447}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: BlockPlus Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,6 +945,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161443445}
   m_CullTransparentMesh: 1
+--- !u!1 &163245963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163245964}
+  - component: {fileID: 163245967}
+  - component: {fileID: 163245966}
+  - component: {fileID: 163245965}
+  m_Layer: 2
+  m_Name: BraveryValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &163245964
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163245963}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00026088356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1723851513}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 237, y: -106}
+  m_SizeDelta: {x: 105.86, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &163245965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163245963}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &163245966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163245963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8588236, g: 0.08627451, b: 0.08627451, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 72e30a1dfcacd0b44929991ff7b1fbb0, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &163245967
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163245963}
+  m_CullTransparentMesh: 1
 --- !u!1 &163672608
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +1052,7 @@ GameObject:
   - component: {fileID: 163672612}
   - component: {fileID: 163672611}
   - component: {fileID: 163672610}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: YouWinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1094,7 +1189,7 @@ GameObject:
   - component: {fileID: 195833938}
   - component: {fileID: 195833937}
   - component: {fileID: 195833936}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: EnemyHPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2696,7 +2791,7 @@ GameObject:
   - component: {fileID: 605837702}
   - component: {fileID: 605837701}
   - component: {fileID: 605837700}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Deconstruction Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2897,11 +2992,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1196
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 621
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3176,6 +3271,32 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 7012436016389238903, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
   m_PrefabInstance: {fileID: 7012436017003352499}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &749396426
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749396419}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.75}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1.5, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5}
+  m_EdgeRadius: 0
 --- !u!1 &750980529 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8158784732975486889, guid: fbef829a4776d1a409f4c50bfb20e723, type: 3}
@@ -3252,7 +3373,7 @@ GameObject:
   - component: {fileID: 768661462}
   - component: {fileID: 768661461}
   - component: {fileID: 768661460}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Max Plays Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3513,7 +3634,7 @@ GameObject:
   - component: {fileID: 803524717}
   - component: {fileID: 803524716}
   - component: {fileID: 803524715}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: YouLoseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3629,11 +3750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -756
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 626
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3685,7 +3806,7 @@ GameObject:
   - component: {fileID: 843898048}
   - component: {fileID: 843898047}
   - component: {fileID: 843898049}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Turn Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3946,11 +4067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -904
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 626
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4168,7 +4289,7 @@ GameObject:
   - component: {fileID: 956340668}
   - component: {fileID: 956340667}
   - component: {fileID: 956340666}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: BlockPlusValue Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4410,7 +4531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12822200fd2da7408a9180e68436390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 0
+  attackDamage: 15
+  pScript: {fileID: 2114329601}
 --- !u!1 &990577220
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,7 +4706,7 @@ GameObject:
   - component: {fileID: 1022993230}
   - component: {fileID: 1022993229}
   - component: {fileID: 1022993228}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: EndTurn Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4909,7 +5031,7 @@ GameObject:
   - component: {fileID: 1043236926}
   - component: {fileID: 1043236928}
   - component: {fileID: 1043236927}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5479,7 +5601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1242975735
 Transform:
   m_ObjectHideFlags: 0
@@ -5693,7 +5815,7 @@ GameObject:
   - component: {fileID: 1321329556}
   - component: {fileID: 1321329557}
   - component: {fileID: 1321329558}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5762,6 +5884,7 @@ MonoBehaviour:
   - {fileID: 1379845919}
   - {fileID: 750980533}
   - {fileID: 1881133635}
+  minionList: []
   boardSlots:
   - {fileID: 802621818}
   - {fileID: 943744812}
@@ -5795,6 +5918,7 @@ MonoBehaviour:
   newPlayedCard: {fileID: 0}
   isHovering: 0
   playerDefending: 0
+  isChoosing: 0
   currentBSlot: 0
   slotHolder: 0
   enemiesLeft: 1
@@ -5817,6 +5941,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  selectedEnemy: {fileID: 0}
+  cam: {fileID: 519420031}
 --- !u!114 &1321329556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5863,8 +5989,7 @@ MonoBehaviour:
   enemyIsDefending: 0
   pScript: {fileID: 2114329601}
   gm: {fileID: 1321329555}
-  enemySpawn: {fileID: 0}
-  eDie: {fileID: 0}
+  isMinion: 0
   enemyAttackValue: 40
   handHiders:
   - {fileID: 2088901566}
@@ -5886,6 +6011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 1321329555}
   pScript: {fileID: 2114329601}
+  aCT: {fileID: 990400040}
   eMS: {fileID: 1321329557}
   turns: {fileID: 1321329556}
   cardTypeAttack: []
@@ -6242,7 +6368,7 @@ GameObject:
   - component: {fileID: 1445727443}
   - component: {fileID: 1445727442}
   - component: {fileID: 1445727441}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Plays Remaining Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6337,7 +6463,7 @@ GameObject:
   - component: {fileID: 1484188879}
   - component: {fileID: 1484188878}
   - component: {fileID: 1484188877}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Draw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6501,11 +6627,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -598
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 626
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6663,7 +6789,7 @@ GameObject:
   - component: {fileID: 1528502965}
   - component: {fileID: 1528502964}
   - component: {fileID: 1528502963}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: EnemyHPValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6769,6 +6895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 0
+  pScript: {fileID: 2114329601}
 --- !u!114 &1540678923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6835,7 +6962,7 @@ GameObject:
   - component: {fileID: 1553540473}
   - component: {fileID: 1553540472}
   - component: {fileID: 1553540474}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Turn Owner Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6929,7 +7056,7 @@ GameObject:
   - component: {fileID: 1569720321}
   - component: {fileID: 1569720323}
   - component: {fileID: 1569720322}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7020,6 +7147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 0
+  pScript: {fileID: 0}
 --- !u!114 &1572261106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7577,7 +7705,7 @@ GameObject:
   - component: {fileID: 1723851511}
   - component: {fileID: 1723851510}
   - component: {fileID: 1723851514}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7634,7 +7762,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 958020147}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -7642,7 +7770,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -72215821
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1723851513
@@ -7673,6 +7801,7 @@ RectTransform:
   - {fileID: 161443446}
   - {fileID: 956340665}
   - {fileID: 803524714}
+  - {fileID: 163245964}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8046,7 +8175,7 @@ GameObject:
   - component: {fileID: 1880802494}
   - component: {fileID: 1880802493}
   - component: {fileID: 1880802495}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: PlayerHP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8226,11 +8355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1052
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 621
       objectReference: {fileID: 0}
     - target: {fileID: 8255215019295333938, guid: 139c09de669d89546999f577551dd885, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8440,6 +8569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 0
+  pScript: {fileID: 0}
 --- !u!114 &1918877952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8639,7 +8769,7 @@ GameObject:
   - component: {fileID: 1932740798}
   - component: {fileID: 1932740797}
   - component: {fileID: 1932740799}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: PlayerHPValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9245,9 +9375,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   hpString: 
+  braveryString: 
   hpValueText: {fileID: 1932740797}
   isDefending: 0
   attackDamage: 40
+  braveryValue: 0
+  braveryText: {fileID: 163245966}
   defendStacks: 0
   GM: {fileID: 0}
   anim: {fileID: 2114329598}
@@ -9263,7 +9396,7 @@ GameObject:
   - component: {fileID: 2119910173}
   - component: {fileID: 2119910172}
   - component: {fileID: 2119910171}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Draw (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9918,11 +10051,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7519439111348128729, guid: 0016fae67faf54a4c903d3abab9bc1e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.03
+      value: 6.4
       objectReference: {fileID: 0}
     - target: {fileID: 7519439111348128729, guid: 0016fae67faf54a4c903d3abab9bc1e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6830916
+      value: 8.13
       objectReference: {fileID: 0}
     - target: {fileID: 7519439111348128729, guid: 0016fae67faf54a4c903d3abab9bc1e8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10047,9 +10180,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4319691393480326101, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 1321329555}
+    - target: {fileID: 4319691393480326101, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
+      propertyPath: pScript
+      value: 
+      objectReference: {fileID: 2114329601}
+    - target: {fileID: 4319691393480326101, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
+      propertyPath: isMinion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319691393480326101, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
+      propertyPath: EnemyHPValue
+      value: 
+      objectReference: {fileID: 1528502964}
     - target: {fileID: 7012436016389238896, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012436016389238896, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7012436016389238901, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
       propertyPath: m_RootOrder
@@ -10057,7 +10210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012436016389238901, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.99
+      value: 12.06
       objectReference: {fileID: 0}
     - target: {fileID: 7012436016389238901, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10094,6 +10247,10 @@ PrefabInstance:
     - target: {fileID: 7012436016389238901, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012436016389238902, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a54b6cf88593be4598f376a71c870d4, type: 3}
