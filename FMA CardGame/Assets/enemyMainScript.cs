@@ -11,6 +11,7 @@ public class enemyMainScript : MonoBehaviour
     public Text EnemyHPValue;
     public string HPString;
     public bool enemyIsDefending;
+    public GameObject eCursor;
 
     public PlayerScript pScript;
     public GameManager gm;
@@ -25,7 +26,7 @@ public class enemyMainScript : MonoBehaviour
     
     void Start()
     {
-       
+       eCursor.SetActive(false);
         
     }
 
@@ -41,9 +42,20 @@ public class enemyMainScript : MonoBehaviour
         //    EnemyHPValue.text = "0";
         //}
 
-
     }
 
+    private void OnMouseOver()
+    {
+        if(gm.isChoosing == true)
+        {
+          {eCursor.SetActive(true);}
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        eCursor.SetActive(false);
+    }
 
     
 

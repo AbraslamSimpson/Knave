@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     public Text deconText;
     public Text youWinText;
     public Text youLoseText;
+    public Text selectEnemyText;
 
     public Animator anim;
     [SerializeField]
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
     {
         youLoseText.enabled = false;
         youWinText.enabled = false;
+        selectEnemyText.enabled = false;
 
         for (int i = 0; i < 4; i++)
         { DrawCard(); enemyDraw(); };       //Draw 4 cards into the enemies hand at the start of the game.
@@ -192,8 +194,9 @@ public class GameManager : MonoBehaviour
                     playedCards[i] = card;
                     card.transform.localScale = new Vector2(0.4f,0.4f);
                     isChoosing = true;
+                    
                     StartCoroutine(selectTarget());
-
+                    
                    return;
 
 
@@ -303,6 +306,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator selectTarget()
     {
+        selectEnemyText.enabled = true;
        while (isChoosing == true)
         {  
              print("choosing targets");
@@ -316,6 +320,7 @@ public class GameManager : MonoBehaviour
                      Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
                      selectedEnemy = hit.transform.gameObject;
                      isChoosing=false;
+                     selectEnemyText.enabled = false;
                 }
                   yield return selectedEnemy;
                 

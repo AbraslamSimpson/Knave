@@ -105,24 +105,26 @@ public class runSequence : MonoBehaviour
                 }
                 if (activeZones[i] == 1)
                 {
-                    pScript.anim.SetBool("isAttacking", true);
+                   
                     particleZone[i].SetActive(true);
-                    
+                    print("Animation play now");
                     if (eMS.enemyIsDefending == false)
-                    {
+                    {   
+                        pScript.anim.SetBool("isAttacking", true);
                         pScript.braveryValue = pScript.braveryValue + aCT.attackDamage;
-                        gm.selectedEnemy.GetComponent<eMS>().takeDamage(aCT.attackDamage);
-                        
+                        gm.selectedEnemy.GetComponent<enemyMainScript>().takeDamage(aCT.attackDamage);
+                         
 
                     }
                     else if (eMS.enemyIsDefending == true)
                     {
-                        eMS.takeDamage(aCT.attackDamage - 15);
+                         pScript.anim.SetBool("isAttacking", true);
+                        eMS.takeDamage(aCT.attackDamage - 2);
                     }
-                    pScript.anim.SetBool("isAttacking", false);
+                    //pScript.anim.SetBool("isAttacking", false);
                     yield return new WaitForSeconds(0.5f);
 
-                    
+                    pScript.anim.SetBool("isAttacking", false);
                     particleZone[i].SetActive(false);
 
                 }
