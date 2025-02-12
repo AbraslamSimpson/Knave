@@ -9,6 +9,7 @@ TagManager:
   - PlayerCardZone
   - EnemyCardZone
   - Enemy
+  - Minion
   layers:
   - Default
   - TransparentFX

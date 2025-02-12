@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public List<Card> hand = new List<Card>();
     public List<Card> enemyHand = new List<Card>();
     public List<ResourceCard> resourceDeck = new List<ResourceCard>();
-    public List<GameObject> minionList;
+    public List<GameObject> minionList = new List<GameObject>();
 
 
     public Transform[] boardSlots;
@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     public Turns turns;
     public enemyMainScript eMS;
     public PlayerScript pScript;
+    public runSequence rSeq;
+    public attackCardType aCT;
 
     public Text deconText;
     public Text youWinText;
@@ -176,7 +178,7 @@ public class GameManager : MonoBehaviour
    public void playCard(Card card)
     {
 
-        if (turns.isYourTurn == true)
+        if (turns.isYourTurn == true && isChoosing != true)
         {
             
             for (int i = 0; i < availableBoardSlots.Length; i++)
@@ -194,9 +196,14 @@ public class GameManager : MonoBehaviour
                     playedCards[i] = card;
                     card.transform.localScale = new Vector2(0.4f,0.4f);
                     isChoosing = true;
-                    
-                    StartCoroutine(selectTarget());
-                    
+                    if (card.GetComponent<attackCardType>() != null)
+                    {
+                        StartCoroutine(selectTarget());
+                    }
+                    else
+                    {
+                        isChoosing = false;
+                    }
                    return;
 
 
@@ -315,7 +322,7 @@ public class GameManager : MonoBehaviour
             {
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 1000) ;
 
-                if(hit.collider != null)
+                if(hit.collider != null && hit.transform.CompareTag("Minion"))
                 {
                      Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
                      selectedEnemy = hit.transform.gameObject;

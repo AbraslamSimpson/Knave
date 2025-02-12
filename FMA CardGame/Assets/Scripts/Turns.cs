@@ -55,7 +55,7 @@ public class Turns : MonoBehaviour
 
     public void EndYourTurn()
     {
-        if (isYourTurn == true)
+        if (isYourTurn == true && gm.isChoosing != true)
         {   
             isYourTurn = false;
             opponentsTurn += 1;
@@ -64,7 +64,7 @@ public class Turns : MonoBehaviour
             
             //OpponentsTurn();
         }
-        else if (isYourTurn == false)
+        else if (isYourTurn == false )
         {
             isYourTurn = true;
             yourTurn += 1;

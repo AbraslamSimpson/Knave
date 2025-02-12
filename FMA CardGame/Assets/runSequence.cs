@@ -193,7 +193,7 @@ public class runSequence : MonoBehaviour
 
         blockText.text = totalBlockAmount.ToString();
        
-        StartCoroutine(waitRoutine());
+        StartCoroutine(turnWaitRoutine());
         
 
     }
@@ -211,7 +211,7 @@ public class runSequence : MonoBehaviour
         return;
     }
 
-    public IEnumerator waitRoutine()
+    public IEnumerator turnWaitRoutine()
     {
         yield return new WaitForSeconds(1);
         //pScript.anim.SetBool("isAttacking", false);
